@@ -27,7 +27,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["packer-ansible-nginx"] # The AMI name set in Packer
+    values = ["packer-ubuntu-24-04"] # The AMI name set in Packer
   }
 
   filter {
@@ -35,6 +35,7 @@ data "aws_ami" "ubuntu" {
     values = ["available"]
   }
 }
+
 
 # Create a VPC
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
