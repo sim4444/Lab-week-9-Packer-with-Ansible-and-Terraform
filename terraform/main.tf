@@ -22,12 +22,15 @@ locals {
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
 data "aws_ami" "ubuntu" {
   #COMPLETE ME
-  owners      = ["self"] # Ensures only your account’s AMIs are considered
+
+  # Ensures only your account’s AMIs are considered
+  owners      = ["self"] 
   most_recent = true
 
+  # The AMI name set in Packer
   filter {
     name   = "name"
-    values = ["packer-ubuntu-24-04"] # The AMI name set in Packer
+    values = ["packer-ubuntu-24-04"] 
   }
 
   filter {
