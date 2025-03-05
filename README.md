@@ -33,13 +33,13 @@ aws configure
 Navigate to the Packer directory:
 ```sh
 cd packer
-
+```
 Initialize Packer:
-
+```sh
 packer init .
-
+```
 Validate the configuration file:
-
+```sh
 packer validate ansible-web.pkr.hcl
 ```
 Build the AMI:
@@ -92,7 +92,7 @@ Open a browser and navigate to:
 ```sh
 http://<EC2_PUBLIC_IP>
 ```
-You should now see the deployed web page.
+We should now see the deployed web page.
 
 ### Cleaning Up Resources
 
@@ -104,4 +104,4 @@ Deregister the AMI:
 ```sh
 aws ec2 deregister-image --image-id <AMI_ID>
 ```
-This process ensures that all AWS resources are properly deallocated, preventing unnecessary charges.
+This process ensures that all AWS resources are properly deallocated which prevents unnecessary charges.
